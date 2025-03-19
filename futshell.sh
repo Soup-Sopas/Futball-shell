@@ -14,13 +14,19 @@ COMPETITION="PD"
 mostrar_banner() {
     clear
     echo -e "${NC}"
-    echo -e "${NC}███████╗██╗   ██╗████████╗${YELLOW} ██████╗ ███████╗"
-    echo -e "${NC}██╔════╝██║   ██║╚══██╔══╝${YELLOW}██╔═══██╗██╔════╝"
-    echo -e "${NC}█████╗  ██║   ██║   ██║   ${YELLOW}██║   ██║███████╗"
-    echo -e "${NC}██╔══╝  ██║   ██║   ██║   ${YELLOW}██║   ██║╚════██║"
-    echo -e "${NC}██║     ╚██████╔╝   ██║   ${YELLOW}╚██████╔╝███████║"
-    echo -e "${NC}╚═╝      ╚═════╝    ╚═╝    ${YELLOW}╚═════╝ ╚══════╝"
-    echo -e "${NC}"
+    echo -e "${NC}███████╗██╗   ██╗████████╗"
+    echo -e "${NC}██╔════╝██║   ██║╚══██╔══╝"
+    echo -e "${NC}█████╗  ██║   ██║   ██║   "
+    echo -e "${NC}██╔══╝  ██║   ██║   ██║   "
+    echo -e "${NC}██║     ╚██████╔╝   ██║   "
+    echo -e "${NC}╚═╝      ╚═════╝    ╚═╝   "
+    echo -e "${YELLOW}     ██████╗ ███████╗"
+    echo -e "${YELLOW}    ██╔═══██╗██╔════╝"
+    echo -e "${YELLOW}    ██║   ██║███████╗"
+    echo -e "${YELLOW}    ██║   ██║╚════██║"
+    echo -e "${YELLOW}    ╚██████╔╝███████║"
+    echo -e "${YELLOW}     ╚═════╝ ╚══════╝"
+
     echo -e "${YELLOW}⚽ Bienvenido a FUTOS - Tu Shell de Fútbol ⚽${NC}"
     echo -e "Escribe 'help' para ver la lista de comandos disponibles."
 }
@@ -205,9 +211,14 @@ interactive_shell() {
     cd 
     cd futshell_instalacion/shell
     mostrar_banner
+
+    shopt -s histappend
+
     while true; do
         echo -ne "⚽ ${CYAN}$(basename $(pwd)) ~ ${NC}"
-        read input
+        read -e input
+        history -s "$input"
+
         case "$input" in
             install) install ;;
             uninstall) uninstall ;;
@@ -287,7 +298,8 @@ matar_proceso() {
 crear_proceso_hijo() {
     echo -e "${YELLOW}Creando un proceso hijo...${NC}"
     (sleep 10 && echo -e "${CYAN}Proceso hijo terminado después de 10 segundos.${NC}") &
-    echo -e "${GREEN}Proceso hijo creado exitosamente.${NC}"
+    PIDHIJO=$!
+    echo -e "${GREEN}Proceso hijo creado exitosamente, PID = $PIDHIJO${NC}"
 }
 
 # Función para simular una competencia de penalti con el rival
@@ -354,3 +366,4 @@ case "$1" in
     help) help_menu ;;
     *) echo -e "${RED}Uso: $0 {install|uninstall|mini-game-1|date-time|interactive|betting|resultados|posiciones|mostrar-pid|matar-proceso|crear-proceso|competencia-penalti|help}${NC}" ;;
 esac
+
