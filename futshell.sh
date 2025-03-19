@@ -57,7 +57,21 @@ install() {
     install_jq
 
     wget -q -O ~/futshell_instalacion/github_file.txt https://raw.githubusercontent.com/Soup-Sopas/Futball-shell/refs/heads/main/README.md
+
+    # Mensaje de instalación completa con enlace y pasos para iniciar la shell interactiva
     echo -e "${GREEN}Instalación completa.${NC}"
+    echo -e "${CYAN}La carpeta de instalación se guardó en: ~/futshell_instalacion${NC}"
+    echo -e "${CYAN}Puedes acceder a esta carpeta con el siguiente comando: ${NC}"
+    echo -e "${YELLOW}cd ~/futshell_instalacion${NC}"
+    echo -e "${CYAN}Para iniciar la shell interactiva, ejecuta el siguiente comando: ${NC}"
+    echo -e "${YELLOW}./futshell_instalacion/futshell.sh interactive${NC}"
+    
+    # Instrucción si no se pueden ejecutar los comandos debido a permisos
+    echo -e "${CYAN}Si el script no se ejecuta correctamente, asegúrate de darle permisos de ejecución con el siguiente comando:${NC}"
+    echo -e "${YELLOW}chmod +x ~/futshell_instalacion/futshell.sh${NC}"
+    echo -e "${CYAN}Luego vuelve a intentar ejecutar la shell interactiva con:${NC}"
+    echo -e "${YELLOW}./futshell_instalacion/futshell.sh interactive${NC}"
+    echo -e "${CYAN}¡Disfruta de la experiencia FUTOS!${NC}"
 }
 
 # Función para desinstalar
@@ -340,4 +354,3 @@ case "$1" in
     help) help_menu ;;
     *) echo -e "${RED}Uso: $0 {install|uninstall|mini-game-1|date-time|interactive|betting|resultados|posiciones|mostrar-pid|matar-proceso|crear-proceso|competencia-penalti|help}${NC}" ;;
 esac
-
