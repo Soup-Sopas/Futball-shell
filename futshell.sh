@@ -189,7 +189,7 @@ help_menu() {
 # Shell interactiva con efectos visuales
 interactive_shell() {
     cd 
-    cd futshell_instalacion
+    cd futshell_instalacion/shell
     mostrar_banner
     while true; do
         echo -ne "⚽ ${CYAN}$(basename $(pwd)) ~ ${NC}"
