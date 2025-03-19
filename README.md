@@ -23,17 +23,17 @@ FUTOS es un script en Bash que combina una interfaz interactiva con un mini-jueg
 
 1. **Para instalar el script**, ejecuta el siguiente comando desde tu terminal:
    
-   ```bash
-   curl -s https://raw.githubusercontent.com/Soup-Sopas/Futball-shell/refs/heads/main/futshell.sh | bash -s install
-   ```
+```bash
+curl -s https://raw.githubusercontent.com/Soup-Sopas/Futball-shell/refs/heads/main/futshell.sh | bash -s install
+```
 
 ### Instalar con el archivo 
 
 2. **Para instalar el script**, simplemente ejecuta:
 
-   ```bash
-   ./futshell.sh install
-   ```
+```bash
+./futshell.sh install
+```
 
 ## Uso:
 Para iniciar la shell interactiva, ejecuta:
