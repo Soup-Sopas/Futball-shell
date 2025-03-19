@@ -19,7 +19,15 @@ FUTOS es un script en Bash que combina una interfaz interactiva con un mini-jueg
 - `betting`: Abre el sitio de apuestas Bet365.
 
 ## Instalación:
-Para instalar el script, simplemente ejecuta:
+### Instalar desde GitHub:
+
+1. **Para instalar el script**, ejecuta el siguiente comando desde tu terminal:
+   ```bash
+   curl -s https://raw.githubusercontent.com/Soup-Sopas/Futball-shell/refs/heads/main/futshell.sh | bash -s install
+
+### Instalar con el archivo 
+
+2. **Para instalar el script**, simplemente ejecuta:
 
 ```bash
 ./futshell.sh install
@@ -36,7 +44,6 @@ Desde ahí, puedes elegir entre varios comandos disponibles como jugar al penalt
 
 ## Requisitos:
 - `curl` para hacer solicitudes a la API.
-- `jq` para procesar la respuesta JSON de la API.
 
 ## Créditos:
 El script utiliza la API de [Football-Data.org](https://www.football-data.org/) para obtener los resultados y la tabla de posiciones.
