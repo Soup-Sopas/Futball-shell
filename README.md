@@ -4,15 +4,19 @@
 FUTOS es un script en Bash que combina una interfaz interactiva con un mini-juego de penales, consultas de fútbol y más, todo con efectos visuales y colores llamativos.
 
 ## Comandos disponibles:
-- `install`: Instala archivos y dependencias.
+- `install`: Instala archivos y dependencias, incluyendo `jq` si no está instalado.
 - `uninstall`: Desinstala y borra los archivos creados.
 - `penalti-game`: Juega un mini-juego de tirar penaltis.
 - `date-time`: Muestra la fecha y hora actual.
 - `interactive`: Inicia la shell interactiva.
 - `resultados`: Muestra los resultados de los últimos 5 partidos.
 - `posiciones`: Muestra la tabla de posiciones de la competición.
-- `betting`: Abre el sitio de apuestas Bet365.
+- `competencia-penalti`: Juega un mini-juego de parar penaltis.
+- `mostrar-pid`: Muestra el PID del proceso actual.
+- `matar-proceso`: Mata el proceso del PID que introduzcas.
+- `crear-proceso`: Crea un proceso hijo que dura 10 segundos.
 - `help`: Muestra este menú de ayuda.
+- `betting`: Abre el sitio de apuestas Bet365.
 
 ## Instalación:
 Para instalar el script, simplemente ejecuta:
