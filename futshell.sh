@@ -51,7 +51,7 @@ install() {
     echo -e "${GREEN}Instalando...${NC}"
     mkdir -p ~/futshell_instalacion
     mkdir -p ~/futshell_instalacion/shell
-    wget -q -O ~/futshell_instalacion/futshell.sh https://raw.githubusercontent.com/Soup-Sopas/Futball-shell/refs/heads/main/
+    wget -q -O ~/futshell_instalacion/futshell.sh https://raw.githubusercontent.com/Soup-Sopas/Futball-shell/refs/heads/main/futshell.sh
     echo "Archivo de prueba" > ~/futshell_instalacion/test.txt
 
     install_jq
